@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanskar Lohani's Blog - Insights on software development, mobile apps, and technology trends.">
+  <meta name="keywords" content="blog, software development, android development, web development, technology">
+  <meta name="author" content="Sanskar Lohani">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Sanskar Lohani's Blog">
+  <meta property="og:description" content="Insights on software development, mobile apps, and technology trends.">
+  <meta property="og:image" content="./assets/images/Sanskar.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  
+  <title>Blog - Sanskar Lohani</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./readme-images/favicon.svg" type="image/svg+xml">
+  
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html">
+        <h1 class="logo">Sanskar</h1>
+      </a>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      </button>
+
+      <nav class="navbar container">
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="index.html#about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="index.html#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
+          </li>
+
+          <li>
+            <a href="index.html#skills" class="navbar-link" data-nav-link>Skills</a>
+          </li>
+
+          <li>
+            <a href="index.html#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link active" data-nav-link>Blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="btn btn-primary">Download CV</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #BLOG HERO
+      -->
+
+      <section class="hero blog-hero" id="blog">
+        <div class="container">
+          <div class="blog-hero-content">
+            <h1 class="hero-title">
+              <span>Welcome to My</span>
+              <strong>Blog</strong>
+            </h1>
+            <p class="hero-text">
+              Dive deep into the world of software development, mobile applications, and emerging technologies. 
+              Here I share insights, tutorials, and thoughts on the ever-evolving tech landscape.
+            </p>
+            <div class="blog-stats">
+              <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Blog Posts</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10k+</span>
+                <span class="stat-label">Readers</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Categories</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #FEATURED POST
+      -->
+
+      <section class="section featured-post">
+        <div class="container">
+          <h2 class="h2 section-title">Featured Post</h2>
+          
+          <div class="featured-blog-card">
+            <div class="featured-image">
+              <img src="./assets/images/blog-1.jpg" alt="Featured Post" class="img-cover">
+              <div class="featured-badge">Featured</div>
+            </div>
+            <div class="featured-content">
+              <div class="featured-meta">
+                <span class="category">Mobile Development</span>
+                <span class="read-time">5 min read</span>
+                <span class="date">Aug 15, 2025</span>
+              </div>
+              <h3 class="featured-title">
+                <a href="#" class="blog-link" data-blog-id="1">Android Development Best Practices: Building Scalable Apps</a>
+              </h3>
+              <p class="featured-excerpt">
+                Discover essential best practices for Android development that will help you build robust, 
+                scalable applications with clean architecture and optimal performance.
+              </p>
+              <div class="featured-author">
+                <img src="./assets/images/Sanskar.jpg" alt="Sanskar Lohani" class="author-avatar">
+                <div class="author-details">
+                  <span class="author-name">Sanskar Lohani</span>
+                  <span class="author-title">App Developer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #ALL BLOG POSTS
+      -->
+
+      <section class="section blog" id="all-posts">
+        <div class="container">
+
+          <h2 class="h2 section-title">All Blog Posts</h2>
+
+          <!-- Search and Filter -->
+          <div class="blog-controls">
+            <div class="search-box">
+              <input type="text" id="blog-search" placeholder="Search posts..." class="search-input">
+              <button class="search-btn" id="search-btn">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
+            
+            <!-- Blog Filter Buttons -->
+            <div class="blog-filter">
+              <button class="filter-btn active" data-filter="all">All Posts</button>
+              <button class="filter-btn" data-filter="web-development">Web Development</button>
+              <button class="filter-btn" data-filter="mobile-development">Mobile Development</button>
+              <button class="filter-btn" data-filter="technology">Technology</button>
+              <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+            </div>
+          </div>
+
+          <ul class="blog-list" id="blog-container">
+
+            <li class="blog-item" data-category="mobile-development">
+              <article class="blog-card">
+
+                <figure class="card-banner">
+                  <a href="#" class="blog-link" data-blog-id="1">
+                    <img src="./assets/images/blog-1.jpg" width="1181" height="843" loading="lazy"
+                      alt="Android Development Best Practices" class="img-cover">
+                  </a>
+                  <div class="card-badge">
+                    <span class="read-time">5 min read</span>
+                    <span class="publish-date">Aug 15, 2025</span>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+                  <a href="#" class="card-tag">Mobile Development</a>
+
+                  <h3 class="card-title">
+                    <a href="#" class="blog-link" data-blog-id="1">Android Development Best Practices: Building Scalable Apps</a>
+                  </h3>
+
+                  <p class="card-description">
+                    Discover essential best practices for Android development that will help you build robust, 
+                    scalable applications with clean architecture and optimal performance.
+                  </p>
+
+                  <div class="card-meta">
+                    <div class="author-info">
+                      <img src="./assets/images/Sanskar.jpg" alt="Sanskar Lohani" class="author-avatar">
+                      <span class="author-name">Sanskar Lohani</span>
+                    </div>
+                    <div class="engagement">
+                      <span class="likes">124 likes</span>
+                      <span class="comments">18 comments</span>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+            </li>
+
+            <li class="blog-item" data-category="web-development">
+              <article class="blog-card">
+
+                <figure class="card-banner">
+                  <a href="#" class="blog-link" data-blog-id="2">
+                    <img src="./assets/images/blog-2.jpg" width="1181" height="843" loading="lazy"
+                      alt="Modern Web Development Frameworks" class="img-cover">
+                  </a>
+                  <div class="card-badge">
+                    <span class="read-time">8 min read</span>
+                    <span class="publish-date">Aug 12, 2025</span>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+                  <a href="#" class="card-tag">Web Development</a>
+
+                  <h3 class="card-title">
+                    <a href="#" class="blog-link" data-blog-id="2">Modern Web Development: Choosing the Right Framework</a>
+                  </h3>
+
+                  <p class="card-description">
+                    A comprehensive guide to selecting the perfect web development framework for your next project. 
+                    Compare React, Vue, Angular, and more modern solutions.
+                  </p>
+
+                  <div class="card-meta">
+                    <div class="author-info">
+                      <img src="./assets/images/Sanskar.jpg" alt="Sanskar Lohani" class="author-avatar">
+                      <span class="author-name">Sanskar Lohani</span>
+                    </div>
+                    <div class="engagement">
+                      <span class="likes">89 likes</span>
+                      <span class="comments">12 comments</span>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+            </li>
+
+            <li class="blog-item" data-category="technology">
+              <article class="blog-card">
+
+                <figure class="card-banner">
+                  <a href="#" class="blog-link" data-blog-id="3">
+                    <img src="./assets/images/blog-3.jpg" width="1181" height="843" loading="lazy"
+                      alt="Future of Software Development" class="img-cover">
+                  </a>
+                  <div class="card-badge">
+                    <span class="read-time">6 min read</span>
+                    <span class="publish-date">Aug 10, 2025</span>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+                  <a href="#" class="card-tag">Technology</a>
+
+                  <h3 class="card-title">
+                    <a href="#" class="blog-link" data-blog-id="3">The Future of Software Development: AI and Beyond</a>
+                  </h3>
+
+                  <p class="card-description">
+                    Explore how artificial intelligence and emerging technologies are reshaping the software 
+                    development landscape and what it means for developers.
+                  </p>
+
+                  <div class="card-meta">
+                    <div class="author-info">
+                      <img src="./assets/images/Sanskar.jpg" alt="Sanskar Lohani" class="author-avatar">
+                      <span class="author-name">Sanskar Lohani</span>
+                    </div>
+                    <div class="engagement">
+                      <span class="likes">156 likes</span>
+                      <span class="comments">24 comments</span>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+            </li>
+
+            <li class="blog-item" data-category="tutorials">
+              <article class="blog-card">
+
+                <figure class="card-banner">
+                  <a href="#" class="blog-link" data-blog-id="4">
+                    <img src="./assets/images/portfolio-1.jpg" width="1181" height="843" loading="lazy"
+                      alt="Building Your First Android App" class="img-cover">
+                  </a>
+                  <div class="card-badge">
+                    <span class="read-time">12 min read</span>
+                    <span class="publish-date">Aug 8, 2025</span>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+                  <a href="#" class="card-tag">Tutorials</a>
+
+                  <h3 class="card-title">
+                    <a href="#" class="blog-link" data-blog-id="4">Step-by-Step: Building Your First Android App</a>
+                  </h3>
+
+                  <p class="card-description">
+                    A complete beginner's guide to Android app development. Learn how to create your first 
+                    mobile application from scratch using modern development tools.
+                  </p>
+
+                  <div class="card-meta">
+                    <div class="author-info">
+                      <img src="./assets/images/Sanskar.jpg" alt="Sanskar Lohani" class="author-avatar">
+                      <span class="author-name">Sanskar Lohani</span>
+                    </div>
+                    <div class="engagement">
+                      <span class="likes">203 likes</span>
+                      <span class="comments">31 comments</span>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+            </li>
+
+          </ul>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-btn" id="prev-btn" disabled>
+              <ion-icon name="chevron-back-outline"></ion-icon>
+              Previous
+            </button>
+            <div class="pagination-numbers" id="pagination-numbers">
+              <span class="page-number active">1</span>
+              <span class="page-number">2</span>
+              <span class="page-number">3</span>
+            </div>
+            <button class="pagination-btn" id="next-btn">
+              Next
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="copyright">
+        &copy; 2025 <a href="#" class="copyright-link">codewithsanskar</a>. All Rights Reserved
+      </p>
+
+      <ul class="footer-list">
+        <li>
+          <a href="#" class="footer-link">Terms & Condition</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+      </ul>
+
+    </div>
+  </footer>
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-to-top" data-back-to-top>BACK TOP</a>
+
+  <!-- Blog Modal -->
+  <div class="blog-modal" id="blog-modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Dynamic blog content will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ion-icon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
