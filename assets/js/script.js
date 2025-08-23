@@ -44,6 +44,133 @@ window.addEventListener("scroll", function () {
 });
 
 /**
+ * CV Download functionality
+ */
+
+// CV Download feature
+document.addEventListener('DOMContentLoaded', function() {
+  const downloadCvBtn = document.getElementById('download-cv-btn');
+  
+  if (downloadCvBtn) {
+    downloadCvBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Show download options modal
+      showDownloadModal();
+    });
+  }
+
+  function showDownloadModal() {
+    // Create modal if it doesn't exist
+    let modal = document.getElementById('cv-download-modal');
+    if (!modal) {
+      modal = createDownloadModal();
+      document.body.appendChild(modal);
+    }
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function createDownloadModal() {
+    const modal = document.createElement('div');
+    modal.id = 'cv-download-modal';
+    modal.className = 'cv-download-modal';
+    
+    modal.innerHTML = `
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header">
+          <h2>Download CV</h2>
+          <p>Choose your preferred format</p>
+        </div>
+        <div class="download-options">
+          <button class="download-option" data-action="view-online">
+            <div class="option-icon">👁️</div>
+            <div class="option-text">
+              <h3>View PDF Online</h3>
+              <p>Open PDF in new tab</p>
+            </div>
+          </button>
+          <button class="download-option" data-action="download-pdf">
+            <div class="option-icon">📄</div>
+            <div class="option-text">
+              <h3>Download PDF</h3>
+              <p>Save PDF to your device</p>
+            </div>
+          </button>
+          <button class="download-option" data-action="print">
+            <div class="option-icon">🖨️</div>
+            <div class="option-text">
+              <h3>Print PDF</h3>
+              <p>Open PDF for printing</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    `;
+
+    // Add event listeners
+    const closeBtn = modal.querySelector('.modal-close');
+    const overlay = modal.querySelector('.modal-overlay');
+    const downloadOptions = modal.querySelectorAll('.download-option');
+
+    closeBtn.addEventListener('click', closeDownloadModal);
+    overlay.addEventListener('click', closeDownloadModal);
+
+    downloadOptions.forEach(option => {
+      option.addEventListener('click', function() {
+        const action = this.getAttribute('data-action');
+        handleDownloadAction(action);
+        closeDownloadModal();
+      });
+    });
+
+    return modal;
+  }
+
+  function closeDownloadModal() {
+    const modal = document.getElementById('cv-download-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  function handleDownloadAction(action) {
+    switch(action) {
+      case 'view-online':
+        // Open PDF in new tab for viewing
+        window.open('./assets/documents/Sanskar_Lohani_CV.pdf', '_blank');
+        break;
+      case 'download-pdf':
+        // Download the actual PDF file
+        const link = document.createElement('a');
+        link.href = './assets/documents/Sanskar_Lohani_CV.pdf';
+        link.download = 'Sanskar_Lohani_CV.pdf';
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        break;
+      case 'print':
+        // Open PDF in new tab for printing
+        const printWindow = window.open('./assets/documents/Sanskar_Lohani_CV.pdf', '_blank');
+        // Note: User will need to use browser's print option for PDF
+        break;
+    }
+  }
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeDownloadModal();
+    }
+  });
+});
+
+/**
  * Enhanced animations and effects
  */
 
@@ -695,5 +822,184 @@ document.addEventListener('DOMContentLoaded', function() {
     item.style.transform = 'translateY(30px)';
     item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
     blogObserver.observe(item);
+  });
+});
+
+/**
+ * Skills Animation
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  const skillsSection = document.querySelector('#skills');
+  const skillProgressBars = document.querySelectorAll('.skill-progress');
+  
+  // Create intersection observer for skills animation
+  const skillsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateSkills();
+        skillsObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  // Observe skills section
+  if (skillsSection) {
+    skillsObserver.observe(skillsSection);
+  }
+
+  function animateSkills() {
+    skillProgressBars.forEach((progressBar, index) => {
+      const targetWidth = progressBar.getAttribute('data-width');
+      const skillCard = progressBar.closest('.skill-card');
+      const percentageElement = skillCard.querySelector('.skill-percentage');
+      
+      setTimeout(() => {
+        // Add animating class to card
+        skillCard.classList.add('animating');
+        
+        // Animate progress bar
+        progressBar.style.width = targetWidth + '%';
+        
+        // Animate percentage counter
+        if (percentageElement) {
+          animateCounter(percentageElement, 0, parseInt(targetWidth), 1500);
+        }
+        
+        // Remove animating class after animation
+        setTimeout(() => {
+          skillCard.classList.remove('animating');
+        }, 2000);
+      }, index * 200);
+    });
+  }
+
+  function animateCounter(element, start, end, duration) {
+    const range = end - start;
+    const stepTime = Math.abs(Math.floor(duration / range));
+    let current = start;
+    
+    const timer = setInterval(() => {
+      current += 1;
+      element.textContent = current + '%';
+      
+      if (current >= end) {
+        clearInterval(timer);
+        // Add final glow effect
+        element.style.animation = 'counterGlow 0.5s ease-out';
+      }
+    }, stepTime);
+  }
+
+  // Animate skill cards on scroll
+  const skillCards = document.querySelectorAll('.skill-card');
+  const cardObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // Initialize and observe skill cards
+  skillCards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    cardObserver.observe(card);
+  });
+});
+
+/**
+ * Contact Form Enhancement
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.querySelector('.contact-form');
+  const contactInputs = document.querySelectorAll('.contact-input');
+  const submitBtn = document.querySelector('.btn-submit');
+
+  // Add floating label effect
+  contactInputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      this.parentElement.classList.add('focused');
+    });
+
+    input.addEventListener('blur', function() {
+      if (this.value === '') {
+        this.parentElement.classList.remove('focused');
+      }
+    });
+
+    // Check if input has value on page load
+    if (input.value !== '') {
+      input.parentElement.classList.add('focused');
+    }
+  });
+
+  // Form submission with loading state
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      // Add loading state
+      submitBtn.innerHTML = `
+        <span>Sending...</span>
+        <div class="loading-spinner"></div>
+      `;
+      submitBtn.disabled = true;
+
+      // Add loading spinner styles
+      const style = document.createElement('style');
+      style.textContent = `
+        .loading-spinner {
+          width: 20px;
+          height: 20px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          border-top-color: white;
+          animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Reset form after a delay (since it's handled by FormSubmit)
+      setTimeout(() => {
+        contactForm.reset();
+        submitBtn.innerHTML = `
+          <span>Send Message</span>
+          <ion-icon name="send-outline"></ion-icon>
+        `;
+        submitBtn.disabled = false;
+        document.head.removeChild(style);
+      }, 3000);
+    });
+  }
+
+  // Animate contact cards on scroll
+  const contactCards = document.querySelectorAll('.contact-card-item');
+  const contactObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // Initialize contact cards animation
+  contactCards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+    contactObserver.observe(card);
   });
 });

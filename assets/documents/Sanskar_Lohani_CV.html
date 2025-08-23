@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskar Lohani - CV</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #ff7730;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .name {
+            font-size: 2.5em;
+            margin: 0;
+            color: #333;
+        }
+        .title {
+            font-size: 1.2em;
+            color: #ff7730;
+            margin: 10px 0;
+        }
+        .contact {
+            margin: 15px 0;
+            color: #666;
+        }
+        .section {
+            margin: 30px 0;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #ff7730;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .item-title {
+            font-weight: bold;
+            color: #333;
+        }
+        .item-date {
+            color: #ff7730;
+            font-weight: bold;
+        }
+        .item-company {
+            color: #666;
+            font-style: italic;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-category {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff7730;
+        }
+        .skill-category h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-list li {
+            padding: 5px 0;
+            color: #666;
+        }
+        @media print {
+            body { background: white; }
+            .cv-container { box-shadow: none; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <h1 class="name">Sanskar Lohani</h1>
+            <div class="title">App Developer | Software Engineer</div>
+            <div class="contact">
+                📧 sanskar.lohani@email.com | 📱 +91-XXXXXXXXXX | 🌐 sanskarlohani.me | 💼 github.com/sanskarlohani
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>Passionate Computer Science student with a strong foundation in various programming languages and technologies. Experienced in mobile app development, particularly Android development, with a focus on creating innovative and user-friendly applications. Seeking opportunities to contribute effectively to innovative and impactful tech initiatives.</p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <ul class="skill-list">
+                        <li>Android Development (Kotlin/Java)</li>
+                        <li>Android Studio</li>
+                        <li>Firebase</li>
+                        <li>Room Database</li>
+                        <li>Retrofit</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <ul class="skill-list">
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>RESTful APIs</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Kotlin</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>IntelliJ IDEA</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">PocketPlan - Expense Tracking Android App</div>
+                    <div class="item-date">2024</div>
+                </div>
+                <div class="item-company">GitHub: github.com/sanskarlohani/PocketPlan</div>
+                <p>Developed a comprehensive expense tracking application for Android using Kotlin. Features include expense categorization, budget management, and detailed analytics with interactive charts.</p>
+                <ul>
+                    <li>Implemented MVVM architecture with Room database for local storage</li>
+                    <li>Created intuitive UI with Material Design principles</li>
+                    <li>Integrated Firebase for user authentication and cloud backup</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Portfolio Website</div>
+                    <div class="item-date">2025</div>
+                </div>
+                <div class="item-company">Live: sanskarlohani.me</div>
+                <p>Designed and developed a responsive portfolio website with dynamic blog system and modern animations.</p>
+                <ul>
+                    <li>Built with HTML5, CSS3, and vanilla JavaScript</li>
+                    <li>Implemented dynamic blog system with filtering and search functionality</li>
+                    <li>Optimized for SEO and mobile responsiveness</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Web Application for Desiverse</div>
+                    <div class="item-date">2024</div>
+                </div>
+                <p>Contributed to the development of a web application focusing on user experience and modern web technologies.</p>
+                <ul>
+                    <li>Collaborated on frontend development using modern frameworks</li>
+                    <li>Implemented responsive design and cross-browser compatibility</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">Bachelor of Computer Science</div>
+                    <div class="item-date">2021 - 2025</div>
+                </div>
+                <div class="item-company">[University Name]</div>
+                <p>Relevant Coursework: Data Structures, Algorithms, Database Management, Software Engineering, Mobile Application Development</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">App Developer</div>
+                    <div class="item-date">3+ Years</div>
+                </div>
+                <div class="item-company">Freelance / Personal Projects</div>
+                <p>Developed multiple Android applications and web projects, focusing on user experience and modern development practices.</p>
+                <ul>
+                    <li>Successfully completed 5+ mobile app projects</li>
+                    <li>Experienced in full development lifecycle from planning to deployment</li>
+                    <li>Strong focus on code quality and best practices</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Achievements & Certifications</h2>
+            <ul>
+                <li>Published multiple projects on GitHub with positive community feedback</li>
+                <li>Experienced in Agile development methodologies</li>
+                <li>Strong problem-solving and analytical skills</li>
+                <li>Passionate about learning new technologies and staying updated with industry trends</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Languages</h2>
+            <ul>
+                <li><strong>English:</strong> Fluent</li>
+                <li><strong>Hindi:</strong> Native</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

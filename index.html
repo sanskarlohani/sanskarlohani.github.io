@@ -90,7 +90,7 @@
           </li>
 
           <li>
-            <a href="#" class="btn btn-primary">Download CV</a>
+            <a href="#" class="btn btn-primary" id="download-cv-btn">Download CV</a>
           </li>
 
         </ul>
@@ -134,9 +134,6 @@
               <ion-icon name="trophy"></ion-icon>
             </div>
 
-            <img src="./assets/images/rotate-img.png" width="169" height="172" alt="I'm developer from New York"
-              class="rotate-img">
-
           </div>
 
           <div class="hero-content">
@@ -178,8 +175,6 @@
             <img src="./assets/images/about-banner.jpg" width="800" height="652" loading="lazy" alt="Ethan's Photo"
               class="img-cover">
 
-            <img src="./assets/images/absolute-image.jpg" width="800" height="717" loading="lazy" alt="Ethan's Photo"
-              class="abs-img">
 
             <div class="abs-icon abs-icon-1">
               <img src="./assets/images/firebase.svg" alt="Firebase" style="width: 40px;">
@@ -211,6 +206,26 @@
 
             <a href="#portfolio" class="btn btn-primary blue">View Portfolio</a>
 
+            <div class="social-links">
+              
+              <a href="https://www.linkedin.com/in/sanskarlohani12/" class="social-link" target="_blank" rel="noopener">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/sanskarlohani" class="social-link" target="_blank" rel="noopener">
+                <ion-icon name="logo-github"></ion-icon>
+                <span>GitHub</span>
+              </a>
+              <a href="https://leetcode.com/u/sxzykBkU5p/" class="social-link" target="_blank" rel="noopener">
+                <ion-icon name="code-slash"></ion-icon>
+                <span>LeetCode</span>
+              </a>
+              <a href="https://www.instagram.com/sanskar.lohani/#" class="social-link" target="_blank" rel="noopener">
+                <ion-icon name="logo-instagram"></ion-icon>
+                <span>Instagram</span>
+              </a>
+            </div>
+
           </div>
 
         </div>
@@ -236,77 +251,152 @@
             web development, and software engineering. Each project demonstrates different aspects of my technical expertise.
           </p>
 
-          <ul class="portfolio-list">
+          <div class="portfolio-grid">
 
-            <li>
-              <a href="https://github.com/sanskarlohani/PocketPlan" class="portfolio-card" style="background-image: url('./assets/images/portfolio-1.jpg')" target="_blank" rel="noopener noreferrer">
-                <div class="card-content">
-                  <p class="card-subtitle">Pocket-Plan</p>
-                  <h3 class="h3 card-title">Android Application for tracking your Expense</h3>
-                  <span class="btn-link">
-                    <span>View Project</span>
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
-                </div>
-              </a>
-            </li>
-            
+        
+            <!-- Project 1: Mobile Application -->
+<div class="portfolio-item">
+  <div class="project-image">
+    <img src="./assets/images/clot.jpg" alt="Clot App Screenshot" class="project-img">
+  </div>
+  <div class="project-details">
+    <div class="project-category">Android Application</div>
+    <h3 class="project-title">CLOT – Stylish Shopping Companion</h3>
+    <p class="project-description">
+      CLOT is a sleek, modern <b>E-Commerce Android app</b> built with <b>Jetpack Compose</b>. 
+      It delivers a smooth and responsive shopping experience, featuring authentication, 
+      cart & wishlist, order tracking, and Firebase-powered backend.
+    </p>
 
-            <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-2.jpg')">
-                <div class="card-content">
+    <div class="tech-stack">
+      <span class="tech-tag">Kotlin</span>
+      <span class="tech-tag">Jetpack Compose</span>
+      <span class="tech-tag">Firebase</span>
+      <span class="tech-tag">MVVM</span>
+      <span class="tech-tag">Hilt</span>
+    </div>
 
-                  <p class="card-subtitle">Vimeo</p>
+    <div class="project-links">
+      <a href="https://github.com/sanskarlohani/Clot" class="project-link" target="_blank" rel="noopener">
+        <ion-icon name="logo-github"></ion-icon>
+        View Code
+      </a>
+      <a href="#" class="project-link demo-link">
+        <ion-icon name="play-outline"></ion-icon>
+        Live Demo
+      </a>
+    </div>
 
-                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
+    <div class="project-extra">
+      <h4>✨ Features:</h4>
+      <ul>
+        <li>🔐 User Authentication (Login / Signup)</li>
+        <li>👤 Profile Management</li>
+        <li>🛒 Add to Cart & Wishlist</li>
+        <li>🔍 Search & Filter Products</li>
+        <li>📦 Track Orders & Delivery</li>
+        <li>💳 Secure Checkout with Firebase backend</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-                  <span class="btn-link">
-                    <span>View Project</span>
 
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
+            <!-- Project 2: Mobile Application -->
+<div class="portfolio-item reverse">
+  <div class="project-image">
+    <img src="./assets/images/unilink.jpg" alt="UniLink App Screenshot" class="project-img">
+  </div>
+  <div class="project-details">
+    <div class="project-category">Mobile Application</div>
+    <h3 class="project-title">UniLink</h3>
+    <p class="project-description">
+      UniLink is an Android app for university communities to report and browse lost-and-found items. 
+      Built with <b>Jetpack Compose</b> and <b>Firebase</b>, it follows a clean MVVM architecture for 
+      a modern and efficient experience.
+    </p>
 
-                </div>
-              </a>
-            </li>
+    <div class="tech-stack">
+      <span class="tech-tag">Kotlin</span>
+      <span class="tech-tag">Jetpack Compose</span>
+      <span class="tech-tag">Firebase</span>
+      <span class="tech-tag">Coroutines</span>
+      <span class="tech-tag">StateFlow</span>
+    </div>
 
-            <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-3.jpg')">
-                <div class="card-content">
+    <div class="project-links">
+      <a href="https://github.com/sanskarlohani/UniLink" target="_blank" class="project-link">
+        <ion-icon name="logo-github"></ion-icon>
+        View Code
+      </a>
+      <a href="#" class="project-link demo-link">
+        <ion-icon name="phone-portrait-outline"></ion-icon>
+        Demo
+      </a>
+    </div>
 
-                  <p class="card-subtitle">Soundcloud</p>
+    <div class="project-extra">
+      <h4>✨ Features:</h4>
+      <ul>
+        <li>🔐 Email/Password authentication (Firebase Auth)</li>
+        <li>👤 User profiles stored in Firestore</li>
+        <li>📌 Report and browse lost & found items</li>
+        <li>🗂 Modern Compose UI with Material 3</li>
+        <li>⚡ MVVM with Repository + StateFlow for clean state management</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
 
-                  <span class="btn-link">
-                    <span>View Project</span>
+            <!-- Project 3: Mobile App -->
+<div class="portfolio-item">
+  <div class="project-image">
+    <img src="./assets/images/su-events.jpg" alt="Su Events Screenshot" class="project-img">
+  </div>
+  <div class="project-details">
+    <div class="project-category">Mobile Application</div>
+    <h3 class="project-title">Su Events</h3>
+    <p class="project-description">
+      Su Events is a modern Android app built with <b>Jetpack Compose (Kotlin)</b> and powered by 
+      <b>Firebase</b>. It serves as a unified platform for college clubs — enabling event hosting, 
+      registrations, member management, and centralized data tracking.
+    </p>
 
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
+    <div class="tech-stack">
+      <span class="tech-tag">Android</span>
+      <span class="tech-tag">Kotlin</span>
+      <span class="tech-tag">Jetpack Compose</span>
+      <span class="tech-tag">Firebase</span>
+      <span class="tech-tag">Firestore</span>
+    </div>
 
-                </div>
-              </a>
-            </li>
+    <div class="project-links">
+      <a href="https://github.com/akmaurya7/SitEvent/tree/EventHive/Sanskar" target="_blank" class="project-link">
+        <ion-icon name="logo-github"></ion-icon>
+        View Code
+      </a>
+      <a href="sc/Untitled video - Made with Clipchamp.mp4" class="project-link demo-link" target="_blank">
+        <ion-icon name="play-circle-outline"></ion-icon>
+        Demo Video
+      </a>
+    </div>
 
-            <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-4.jpg')">
-                <div class="card-content">
+    <div class="project-extra">
+      <h4>✨ Features:</h4>
+      <ul>
+        <li>📆 Event Management: Create, host, and manage events.</li>
+        <li>🧑‍🤝‍🧑 Member Registration & Tracking.</li>
+        <li>🏢 Club Organization with centralized workflows.</li>
+        <li>📂 Firebase-powered secure data storage.</li>
+        <li>✅ Optimized for student clubs & organizers.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+               
 
-                  <p class="card-subtitle">Details</p>
-
-                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
-
-                  <span class="btn-link">
-                    <span>View Project</span>
-
-                    <ion-icon name="arrow-forward"></ion-icon>
-                  </span>
-
-                </div>
-              </a>
-            </li>
-
-          </ul>
+          </div>
 
         </div>
       </section>
@@ -319,83 +409,261 @@
 <section class="section skills" id="skills">
   <div class="container">
 
-    <p class="section-subtitle">My Skills</p>
+    <p class="section-subtitle">My Tech Stack</p>
 
-    <h2 class="h2 section-title">I Develop Skills Regularly</h2>
+    <h2 class="h2 section-title">Technologies I Master</h2>
 
     <p class="section-text">
-      I continuously sharpen my development skills by building projects, solving real-world problems, and learning new tech stacks.
+      I specialize in modern technologies for mobile and web development, with expertise across the full development lifecycle.
     </p>
 
-    <ul class="skills-list">
+    <div class="skills-categories">
 
-      <li class="skills-item">
-        <div class="skills-header">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="skills-icon">
-          <h3 class="skills-title">Kotlin</h3>
-          <span class="skills-data">95%</span>
+      <!-- Programming Languages -->
+      <div class="skill-category">
+        <div class="category-header">
+          <ion-icon name="code-slash-outline" class="category-icon"></ion-icon>
+          <h3 class="category-title">Programming Languages</h3>
         </div>
-        <div class="skills-progress-box">
-          <div class="skills-progress glow" style="width: 95%"></div>
-        </div>
-      </li>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Kotlin</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+              <span class="skill-percentage">95%</span>
+            </div>
+          </div>
 
-      <li class="skills-item">
-        <div class="skills-header">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skills-icon">
-          <h3 class="skills-title">Java</h3>
-          <span class="skills-data">75%</span>
-        </div>
-        <div class="skills-progress-box">
-          <div class="skills-progress glow" style="width: 75%"></div>
-        </div>
-      </li>
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Java</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+              <span class="skill-percentage">85%</span>
+            </div>
+          </div>
 
-      <li class="skills-item">
-        <div class="skills-header">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="skills-icon">
-          <h3 class="skills-title">Spring Boot</h3>
-          <span class="skills-data">90%</span>
-        </div>
-        <div class="skills-progress-box">
-          <div class="skills-progress glow" style="width: 90%"></div>
-        </div>
-      </li>
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+            </div>
+            <h4 class="skill-name">JavaScript</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+              <span class="skill-percentage">80%</span>
+            </div>
+          </div>
 
-      <li class="skills-item">
-        <div class="skills-header">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="skills-icon">
-          <h3 class="skills-title">Firebase/MongoDB</h3>
-          <span class="skills-data">90%</span>
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Python</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75"></div>
+              </div>
+              <span class="skill-percentage">75%</span>
+            </div>
+          </div>
         </div>
-        <div class="skills-progress-box">
-          <div class="skills-progress glow" style="width: 90%"></div>
-        </div>
-      </li>
+      </div>
 
-      <li class="skills-item">
-        <div class="skills-header">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android Studio" class="skills-icon">
-          <h3 class="skills-title">Android Studio</h3>
-          <span class="skills-data">95%</span>
+      <!-- Frameworks & Libraries -->
+      <div class="skill-category">
+        <div class="category-header">
+          <ion-icon name="library-outline" class="category-icon"></ion-icon>
+          <h3 class="category-title">Frameworks & Libraries</h3>
         </div>
-        <div class="skills-progress-box">
-          <div class="skills-progress glow" style="width: 95%"></div>
-        </div>
-      </li>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Spring Boot</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+              <span class="skill-percentage">90%</span>
+            </div>
+          </div>
 
-      <li class="skills-item">
-        <div class="skills-header">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skills-icon">
-          <h3 class="skills-title">GitHub</h3>
-          <span class="skills-data">95%</span>
-        </div>
-        <div class="skills-progress-box">
-          <div class="skills-progress glow" style="width: 95%"></div>
-        </div>
-      </li>
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon">
+            </div>
+            <h4 class="skill-name">React</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75"></div>
+              </div>
+              <span class="skill-percentage">75%</span>
+            </div>
+          </div>
 
-    </ul>
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Node.js</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70"></div>
+              </div>
+              <span class="skill-percentage">70%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Express.js</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70"></div>
+              </div>
+              <span class="skill-percentage">70%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database & Cloud -->
+      <div class="skill-category">
+        <div class="category-header">
+          <ion-icon name="server-outline" class="category-icon"></ion-icon>
+          <h3 class="category-title">Database & Cloud</h3>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Firebase</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+              <span class="skill-percentage">90%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-icon">
+            </div>
+            <h4 class="skill-name">MongoDB</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+              <span class="skill-percentage">85%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
+            </div>
+            <h4 class="skill-name">MySQL</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+              <span class="skill-percentage">80%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="skill-icon">
+            </div>
+            <h4 class="skill-name">AWS</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="65"></div>
+              </div>
+              <span class="skill-percentage">65%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & IDE -->
+      <div class="skill-category">
+        <div class="category-header">
+          <ion-icon name="build-outline" class="category-icon"></ion-icon>
+          <h3 class="category-title">Development Tools</h3>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android Studio" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Android Studio</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+              <span class="skill-percentage">95%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-icon">
+            </div>
+            <h4 class="skill-name">VS Code</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+              <span class="skill-percentage">90%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon">
+            </div>
+            <h4 class="skill-name">Git</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+              <span class="skill-percentage">85%</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon-wrapper">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon">
+            </div>
+            <h4 class="skill-name">GitHub</h4>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+              <span class="skill-percentage">95%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </section>
@@ -412,80 +680,132 @@
 <section class="section contact" id="contact">
   <div class="container">
 
-    <div class="contact-card">
+    <div class="contact-header">
+      <p class="section-subtitle">Let's Connect</p>
+      <h2 class="h2 section-title">Ready to Start Your Project?</h2>
+      <p class="section-text">
+        Have a project in mind or want to collaborate? I'm always excited to work on innovative solutions 
+        and bring creative ideas to life. Let's discuss how we can work together!
+      </p>
+    </div>
 
-      <p class="card-subtitle">Don't be shy</p>
-
-      <h2 class="h2 section-title">Drop Me a Line</h2>
-
-      <div class="wrapper">
+    <div class="contact-wrapper">
+      
+      <!-- Contact Form Side -->
+      <div class="contact-form-container">
+        <div class="form-header">
+          <h3 class="form-title">Send me a message</h3>
+          <p class="form-subtitle">I'll get back to you within 24 hours</p>
+        </div>
 
         <form action="https://formsubmit.co/lohani.12sanskar@gmail.com" method="POST" class="contact-form">
-          <!-- Disable CAPTCHA -->
+          <!-- Hidden fields -->
           <input type="hidden" name="_captcha" value="false">
-
-          <!-- Redirect to a thank-you page after submission 
-          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">    -->
-
-          <!-- Email subject -->
           <input type="hidden" name="_subject" value="New message from your portfolio site!">
-
-          <!-- Autoresponse -->
           <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I'll get back to you soon.">
 
-          <input type="text" name="name" placeholder="Name" required class="contact-input">
-          <input type="email" name="email" placeholder="Email" required class="contact-input">
-          <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
-          <button type="submit" class="btn-submit">Submit Message</button>
+          <div class="input-group">
+            <div class="input-wrapper">
+              <ion-icon name="person-outline" class="input-icon"></ion-icon>
+              <input type="text" name="name" placeholder="Your Name" required class="contact-input">
+            </div>
+            <div class="input-wrapper">
+              <ion-icon name="mail-outline" class="input-icon"></ion-icon>
+              <input type="email" name="email" placeholder="Your Email" required class="contact-input">
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <ion-icon name="document-text-outline" class="input-icon"></ion-icon>
+            <input type="text" name="subject" placeholder="Subject" required class="contact-input">
+          </div>
+
+          <div class="input-wrapper">
+            <ion-icon name="chatbubble-outline" class="input-icon message-icon"></ion-icon>
+            <textarea name="message" placeholder="Your Message" required class="contact-input message-input" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span>Send Message</span>
+            <ion-icon name="send-outline"></ion-icon>
+          </button>
         </form>
+      </div>
 
-        <ul class="contact-list">
+      <!-- Contact Info Side -->
+      <div class="contact-info-container">
+        <div class="contact-info-header">
+          <h3 class="info-title">Get in Touch</h3>
+          <p class="info-subtitle">Let's discuss your next project</p>
+        </div>
 
-          <li class="contact-item">
-
-            <div class="contact-icon">
-              <ion-icon name="location"></ion-icon>
+        <div class="contact-cards">
+          
+          <div class="contact-card-item">
+            <div class="contact-card-icon">
+              <ion-icon name="location-outline"></ion-icon>
             </div>
-
-            <div>
-              <h3 class="contact-item-title">Address</h3>
-
-              <address class="contact-item-link">
-                20, London, United Kingdom
-              </address>
+            <div class="contact-card-content">
+              <h4 class="contact-card-title">Location</h4>
+              <p class="contact-card-text">Bhubaneswar, Odisha, India</p>
             </div>
+          </div>
 
-          </li>
-
-          <li class="contact-item">
-
-            <div class="contact-icon">
-              <ion-icon name="mail"></ion-icon>
+          <div class="contact-card-item">
+            <div class="contact-card-icon">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-
-            <div>
-              <h3 class="contact-item-title">Email</h3>
-
-              <a href="mailto:lohani.12sanskar@gmail.com" class="contact-item-link">lohani.12sanskar@gmail.com</a>
+            <div class="contact-card-content">
+              <h4 class="contact-card-title">Email</h4>
+              <a href="mailto:lohani.12sanskar@gmail.com" class="contact-card-link">lohani.12sanskar@gmail.com</a>
             </div>
+          </div>
 
-          </li>
-
-          <li class="contact-item">
-
-            <div class="contact-icon">
-              <ion-icon name="call"></ion-icon>
+          <div class="contact-card-item">
+            <div class="contact-card-icon">
+              <ion-icon name="call-outline"></ion-icon>
             </div>
-
-            <div>
-              <h3 class="contact-item-title">Phone</h3>
-
-              <a href="tel:+917780029905" class="contact-item-link">+91 7780029905</a>
+            <div class="contact-card-content">
+              <h4 class="contact-card-title">Phone</h4>
+              <a href="tel:+917780029905" class="contact-card-link">+91 7780029905</a>
             </div>
+          </div>
 
-          </li>
+          <div class="contact-card-item">
+            <div class="contact-card-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <div class="contact-card-content">
+              <h4 class="contact-card-title">Response Time</h4>
+              <p class="contact-card-text">Within 24 hours</p>
+            </div>
+          </div>
 
-        </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="contact-social">
+          <h4 class="social-title">Follow Me</h4>
+          <div class="social-links-contact">
+            <a href="https://github.com/sanskarlohani" class="social-link-contact" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/sanskarlohani12/" class="social-link-contact" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/sanskar.lohani/#" class="social-link-contact" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://leetcode.com/u/sxzykBkU5p/" class="social-link-contact" target="_blank">
+              <ion-icon name="code-slash"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <!-- Availability Status -->
+        <div class="availability-status">
+          <div class="status-indicator"></div>
+          <span class="status-text">Available for freelance projects</span>
+        </div>
 
       </div>
 
